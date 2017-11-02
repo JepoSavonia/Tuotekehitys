@@ -1,0 +1,133 @@
+:root{
+	--main-color: #06799F;
+	
+	--ilmoitus-color: #61ACC5;
+	--light-color: #2A86A5;
+	--dark-color:  #045874;
+	--white-color: #FFFFFF;
+	--black-color: #000;
+}
+
+body, .content-wrapper{
+	height: 100%;
+}
+
+.bannerCon{
+	width:100%;
+	height: 200px;
+	background-color: var(--main-color);
+}
+
+.menuConWide{
+	display: inline-block;
+	width: 200px;
+	height: 100%;
+	float: left;
+	background-color: var(--main-color);
+}
+.menuConWide .verticalList{
+	list-style: none;
+	padding-left: 0;
+}
+.menuConWide .verticalList li{
+	padding: 10px 10px;	
+}
+.menuConWide .verticalList li:hover, .menuConWide .verticalList li.selected{
+	background-color: var(--light-color);
+}
+
+.contentCon{
+	display: inline-block;
+	width: calc(100% - 200px);
+	background-color: var(--white-color);
+	float: right;
+	height: auto;
+	padding: 20px;
+	box-sizing: border-box;
+	
+	
+}
+
+.contentCon > div{
+	text-align: center;
+	display: inline-block;
+	vertical-align:top;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.ilmoitus{
+	text-align: left;
+	background-color: var(--ilmoitus-color);
+	width: 100%;
+	max-width: 500px;
+	min-height: 50px;
+	height: auto;
+	line-height: 50px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+.ilmoitus:hover{
+	background-color: var(--main-color);
+}
+.ilmoitus span{
+	margin: 0 10px;
+	display: inline-block;
+	vertical-align: center;
+	line-height: normal;
+}
+
+.ilmoitus span.date{
+	float: right;
+}
+.etuTaloIlmCon{
+	width: 40%;
+}
+.etuOmaIlmCon{
+	width: 40%;
+}
+.etuOmaVarCon{
+	width: 18%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .etuTaloIlmCon{
+	width: 100%;
+}
+.etuOmaIlmCon{
+	width: 49%;
+}
+.etuOmaVarCon{
+	width: 49%;
+}
+}
+
+@media only screen and (max-width: 650px) {
+.menuConWide{
+	display: none;
+}
+	
+.contentCon{
+	width: 100%;
+	padding: 10px 0;
+}
+	
+.etuTaloIlmCon{
+	width: 100%;
+}
+.etuOmaIlmCon{
+	width: 100%;
+}
+.etuOmaVarCon{
+	width: 100%;
+}
+.ilmoitus span{
+	margin: 0 0;
+	display: block;
+}
+
+}
+
+
+
