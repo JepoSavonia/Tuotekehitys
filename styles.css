@@ -129,5 +129,81 @@ body, .content-wrapper{
 
 }
 
+#page{
+	text-align: center;
+	vertical-align: middle;
+}
+
+#varaukset {
+	display:block;
+	overflow:auto;
+    width:50%;
+}
+
+#weeks {
+	display:block;
+	overflow:auto;
+    width:50%;
+	background-color: #350;
+}
+
+#weekCalendar{
+	display:block;
+	overflow:auto;
+    width:50%;
+}
+
+#varaukset ul li:hover {
+    background-color: #111;
+}
+
+#weeks p{
+	float: center;
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#varaukset ul li{
+	float: left;
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#varaukset ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#table1 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#table1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#table1 tr:hover {background-color: #ddd;}
+
+#table1 td, #table1 th {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
 
 
