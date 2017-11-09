@@ -12,7 +12,7 @@ $(document).ready(function(){
 '{ "otsikko":"Syystalkoot" , "pvm":"4.8.2017", "id":3 } ]}';
 
 	var omaData = '{ "ilmoitukset" : [' +
-'{ "otsikko":"Kuka ***** ulisee yöllä" , "pvm":"12.12.2017", "id":1 }]}';
+'{ "otsikko":"Koiravahtia vk 48" , "pvm":"12.12.2017", "id":1 }]}';
 
 	var varausData = '{ "varaukset" : [' +
 '{ "kohde":"Pyykkikone" , "pvm":"12.12.2017", "aika":"17.00-18.00", "id":1 },'+
