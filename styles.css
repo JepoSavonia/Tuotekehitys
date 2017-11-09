@@ -112,6 +112,9 @@ body, .content-wrapper{
 .horizontalList {
 	list-style:none;
 	width: auto;
+	height: 46px;
+	vertical-align: middle;
+	margin: 0 0;
 }
 
 .horizontalList ul {
@@ -124,7 +127,10 @@ body, .content-wrapper{
 	min-width: 30px;
 	overflow:hidden;
 	margin:auto;
-	min-height: 30px;
+	min-height:30px;
+	margin:auto;
+	min-height: 46px;
+	vertical-align: middle;
 }
 
 .message-status {
