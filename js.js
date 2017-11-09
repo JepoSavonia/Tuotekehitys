@@ -35,5 +35,24 @@ for(var i = 0; i< omatIlmoitukset.ilmoitukset.length; i++){
 for(var i = 0; i< varaukset.varaukset.length; i++){
 	$('.etuOmaVarCon').append("<div class='ilmoitus' id='"+ varaukset.varaukset[i].id + "'><span>"+ varaukset.varaukset[i].kohde + " "+ varaukset.varaukset[i].aika  +" "+ varaukset.varaukset[i].pvm  +"</span></div>");
 	}
+	
+	// sivujen hallinta
+	//$("#etusivu").on("click",function() {
+	//	$(document).load("Etusivu.html");
+	//});
+	
+	
+	$("#ilmoitukset").on("click",function() {
+		$(".contentCon").load("Ilmoitukset.html");
+	});
+	
+	$("#saannot").on("click",function() {
+		$(".contentCon").load("Saannot.html");
+	});
+	
+	$("#seuranta").on("click",function() {
+		$(".contentCon").load("Seuranta.html");
+	});
+	
 
 });
