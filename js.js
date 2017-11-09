@@ -25,15 +25,15 @@ var ilmoitukset = JSON.parse(data);
 var omatIlmoitukset = JSON.parse(omaData);
 
 for(var i = 0; i< ilmoitukset.ilmoitukset.length; i++){
-	$('.etuTaloIlmCon').append("<div class='ilmoitus' id='"+ ilmoitukset.ilmoitukset[i].id + "'><span>"+ ilmoitukset.ilmoitukset[i].otsikko + "</span><span class='date'>"+ ilmoitukset.ilmoitukset[i].pvm + "</span></div>");
+	$('.etuTaloIlmCon').append("<div class='ilmoitus' id='Ilm"+ ilmoitukset.ilmoitukset[i].id + "'><span>"+ ilmoitukset.ilmoitukset[i].otsikko + "</span><span class='date'>"+ ilmoitukset.ilmoitukset[i].pvm + "</span></div>");
 	}
 	
 for(var i = 0; i< omatIlmoitukset.ilmoitukset.length; i++){
-	$('.etuOmaIlmCon').append("<div class='ilmoitus' id='"+ omatIlmoitukset.ilmoitukset[i].id + "'><span>"+ omatIlmoitukset.ilmoitukset[i].otsikko + "</span><span class='date'>"+ omatIlmoitukset.ilmoitukset[i].pvm + "</span></div>");
+	$('.etuOmaIlmCon').append("<div class='ilmoitus' id='OIlm"+ omatIlmoitukset.ilmoitukset[i].id + "'><span>"+ omatIlmoitukset.ilmoitukset[i].otsikko + "</span><span class='date'>"+ omatIlmoitukset.ilmoitukset[i].pvm + "</span></div>");
 	}
 	
 for(var i = 0; i< varaukset.varaukset.length; i++){
-	$('.etuOmaVarCon').append("<div class='ilmoitus' id='"+ varaukset.varaukset[i].id + "'><span>"+ varaukset.varaukset[i].kohde + " "+ varaukset.varaukset[i].aika  +" "+ varaukset.varaukset[i].pvm  +"</span></div>");
+	$('.etuOmaVarCon').append("<div class='ilmoitus' id='Var"+ varaukset.varaukset[i].id + "'><span>"+ varaukset.varaukset[i].kohde + " "+ varaukset.varaukset[i].aika  +" "+ varaukset.varaukset[i].pvm  +"</span></div>");
 	}
 
 });
