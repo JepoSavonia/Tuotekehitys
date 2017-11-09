@@ -166,20 +166,17 @@ body, .content-wrapper{
 #varaukset {
 	display:block;
 	overflow:auto;
-    width:50%;
 }
 
 #weeks {
 	display:block;
 	overflow:auto;
-    width:50%;
 	background-color: #350;
 }
 
 #weekCalendar{
 	display:block;
 	overflow:auto;
-    width:50%;
 }
 
 #varaukset ul li:hover {
