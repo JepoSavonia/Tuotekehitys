@@ -55,6 +55,7 @@ body, .content-wrapper{
 	background-color: var(--white-color);
 	float: right;
 	height: auto;
+
 	box-sizing: border-box;
 	
 	
@@ -62,28 +63,89 @@ body, .content-wrapper{
 
 /*
 	Jukan juttuja -->
+	
+	Yleistä
 */
-.horizontalListCon {
-	width:100%;
-	height:auto;
-	background-color:cyan;
+
+.content-left {
+	overflow: hidden;
+	/*background-color: purple;*/
+	width:50%; 
+	float:left;
 }
+
+.content-right {
+	overflow: hidden;
+	/*background-color: cyan;*/
+	width:50%;
+	float:right;
+}
+
+.content-main {
+	width:100%;
+}
+
+#content-title-0 {
+	/*float: left;*/
+}
+#content-title-1 {
+	/*float: right;*/
+}
+
+.horizontalListCon .horizontalList li:hover, .horizontalListCon .horizontalList li.selected{
+	background-color: var(--light-color);
+}
+
+/* 
+	Ilmoitus sivu 
+*/
+
+.horizontalListCon {
+	text-align: center;
+	width:100%;
+	margin:auto;
+	background-color: var(--main-color);
+	
+	/*background-color:cyan;*/
+	/*background-color: var(--main-color);*/
+}
+
 
 .horizontalList {
 	list-style:none;
-	/*padding: 20px;*/
 	width: auto;
+	height: 46px;
+	vertical-align: middle;
+	margin: 0 0;
 }
 
 .horizontalList ul {
-	
+	margin:0;
+	vertical-align:center;	
 }
-.horizontalList li {
+.horizontalList li {		
 	float:left;
 	width: 33.3%;
 	min-width: 30px;
 	overflow:hidden;
+	margin:auto;
+	min-height:30px;
+	margin:auto;
+	min-height: 46px;
+	vertical-align: middle;
 }
+
+.message-status {
+	/*float:right;*/
+}
+
+/*
+	Saannot sivu
+*/
+
+/*
+	Seuranta sivu
+*/
 
 /*
 	<--

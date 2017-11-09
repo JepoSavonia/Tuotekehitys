@@ -37,14 +37,34 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	}
 	
 	// sivujen hallinta
-	//$("#etusivu").on("click",function() {
-	//	$(document).load("Etusivu.html");
-	//});
 	
-	
+	// Varaus sivu
+	$("#varaukset").on("click",function() {
+		$(".contentCon").load("Varaukset.html");
+	});
+
+	// Ilmoitus sivu
 	$("#ilmoitukset").on("click",function() {
 		$(".contentCon").load("Ilmoitukset.html");
 	});
+	
+	// Ilmoitussivu vällehti
+	$("#taloyhtioilmoitukset").on("click",function() {
+		$(".contentCon").load("Ilmoitukset.html");
+	});
+	
+	// Asukasilmoitukset
+	$("#asukasilmoitukset").on("click",function() {
+		$(".content-main").load("Asukasilmoitukset.html");
+	});
+
+	// Tee vikailmoitus
+	$("#teevikailmoitus").on("click",function() {
+		$(".content-main").load("Teevikailmoitus.html");
+	});
+	
+	
+	
 	
 	$("#saannot").on("click",function() {
 		$(".contentCon").load("Saannot.html");
