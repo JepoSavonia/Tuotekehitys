@@ -48,6 +48,35 @@ body, .content-wrapper{
 	
 }
 
+/*
+	Jukan juttuja -->
+*/
+.horizontalListCon {
+	width:100%;
+	height:auto;
+	background-color:cyan;
+}
+
+.horizontalList {
+	list-style:none;
+	/*padding: 20px;*/
+	width: auto;
+}
+
+.horizontalList ul {
+	
+}
+.horizontalList li {
+	float:left;
+	width: 33.3%;
+	min-width: 30px;
+	overflow:hidden;
+}
+
+/*
+	<--
+*/
+
 .contentCon > div{
 	text-align: center;
 	display: inline-block;
