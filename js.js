@@ -54,5 +54,9 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 		$(".contentCon").load("Seuranta.html");
 	});
 	
+	$(".ilmoitus").on("click", function() {
+		$(".contentCon").load("Ilmoitus_esimerkki.html");
+	});
+	
 
 });
