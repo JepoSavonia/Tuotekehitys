@@ -50,6 +50,13 @@ body, .content-wrapper{
 	background-color: var(--light-color);
 }
 
+.stickyMenu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+}
+
 .contentCon{
 	display: inline-block;
 	width: calc(100% - 200px);
@@ -67,6 +74,10 @@ body, .content-wrapper{
 	
 	Yleistä
 */
+.contentCon >.saanot-content-wrapper{
+	text-align: left;
+}
+
 
 .content-left {
 	overflow: hidden;
@@ -201,6 +212,12 @@ a{
 	width: 18%;
 }
 
+.as-ilm-content-main > div{
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+}
+
 
 @media only screen and (max-width: 1200px) {
     .etuTaloIlmCon{
@@ -221,6 +238,7 @@ a{
 	
 .contentCon{
 	width: 100%;
+	height: auto;
 	
 }
 	
@@ -317,7 +335,7 @@ a{
 
 #table1 tr:nth-child(even){background-color: #f2f2f2;}
 
-#table1 tr:hover {background-color: #ddd;}
+#table1 td:hover {background-color: #ddd;}
 
 #table1 td, #table1 th {
     border: 1px solid #ddd;
@@ -332,11 +350,16 @@ a{
 	width: 100%;
 	border: 1px solid black;
 	text-align: left !important;
+	padding: 5px;
 	
 }
 .vastaukset .lahettaja{
 	display: inline-block;
 	
+}
+
+.message{
+	border-left: 1px solid black;
 }
 
 .vastaukset .message{
@@ -509,7 +532,8 @@ body {
 	
 }
 .shadow{
-	position: absolute;
+	position: fixed;
+	top: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 1;
@@ -517,8 +541,30 @@ body {
 }
 .popup{
 	display: block;
-	position: absolute:
-	
+	position: fixed;
+	top: 50px;
+	width: 50%;
+	left: 25%;
+	height: calc(100% - 100px);
+	box-sizing: border-box;
+	background-color: var(--white-color);
+	z-index: 2;
+	overflow: auto;
+	padding: 10px;
 }
 
+.smallpopup{
+position: fixed;
+width: 500px;
+height: 200px;
+margin: 5% auto;
+left: 0;
+right: 0;
+display: block;
+z-index: 2;
+background-color: var(--white-color);
+}
 
+.omaVaraus{
+	color: red;
+}
