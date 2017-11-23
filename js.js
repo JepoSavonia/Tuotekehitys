@@ -34,6 +34,7 @@ var omatIlmoitukset = JSON.parse(omaData);
 for(var i = 0; i< ilmoitukset.ilmoitukset.length; i++){
 	$('.etuTaloIlmCon').append("<div class='ilmoitus' id='Ilm"+ ilmoitukset.ilmoitukset[i].id + "'><span>"+ ilmoitukset.ilmoitukset[i].otsikko + "</span><span class='date'>"+ ilmoitukset.ilmoitukset[i].pvm + "</span></div>");
 	$('.taloIlmCon').append("<div class='ilmoitus' id='Ilm"+ ilmoitukset.ilmoitukset[i].id + "'><span>"+ ilmoitukset.ilmoitukset[i].otsikko + "</span><span class='date'>"+ ilmoitukset.ilmoitukset[i].pvm + "</span></div>");
+		
 	}
 	
 for(var i = 0; i< omatIlmoitukset.ilmoitukset.length; i++){
@@ -142,6 +143,7 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	$("#seuranta").on("click",function() {
 		$(".contentCon").load("Seuranta.html", function(){
 			checkScrollBar();
+			$("#seuranta").removeClass("new");
 		});
 		
 	});
@@ -167,7 +169,11 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 		});
 	});
 		
-
+	$(".ilmoitusOtsikko").on("click", function(){
+		$(".selected").removeClass("selected");
+		$(this).addClass("selected");
+		
+	});
 	
 
 });
