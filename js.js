@@ -63,28 +63,28 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	// sivujen hallinta
 	
 	// Varaus sivu
-	$("#varaukset").on("click",function() {
+	$(".varaukset").on("click",function() {
 		$(".contentCon").load("Varaukset.html", function(){
 			checkScrollBar();
 		});
 	});
 
 	// Ilmoitus sivu
-	$("#ilmoitukset").on("click",function() {
+	$(".ilmoitukset").on("click",function() {
 		$(".contentCon").load("Ilmoitukset.html", function(){
 			checkScrollBar();
 		});
 	});
 	
 	// Ilmoitussivu vällehti
-	$("#taloyhtioilmoitukset").on("click",function() {
+	$(".taloyhtioilmoitukset").on("click",function() {
 		$(".contentCon").load("Ilmoitukset.html", function(){
 			checkScrollBar();
 		});
 	});
 	
 	// Asukasilmoitukset
-	$("#asukasilmoitukset").on("click",function() {
+	$(".asukasilmoitukset").on("click",function() {
 		$(".content-main").load("Asukasilmoitukset.html", function(){
 			for(var i = 0; i< asIlm.ilmoitukset.length; i++){
 				$('.asukasIlm').append("<div class='ilmoitus' id='AIlm"+ asIlm.ilmoitukset[i].id + "'><span>"+ asIlm.ilmoitukset[i].otsikko + "</span><span class='date'>"+ asIlm.ilmoitukset[i].pvm + "</span></div>");
@@ -100,7 +100,7 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	});
 
 	// Tee vikailmoitus
-	$("#teevikailmoitus").on("click",function() {
+	$(".teevikailmoitus").on("click",function() {
 		$(".content-main").load("Teevikailmoitus.html", function(){
 			checkScrollBar();
 		});
@@ -108,14 +108,14 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	
 	//varaus
 	
-	$(".contentCon").on("click", "#table1 td", function() {
+	$(".contentCon").on("click", ".table1 td", function() {
 		if($(this).html()=="")
 		{
 			var aika = $(this).siblings('th').html();
 			var aika2 = parseInt(aika.substring(0, aika.indexOf(':')));
 			aika2++;
 			aika = aika + " - " + aika2 + ".00";
-			 if(confirm("Varataanko pyykkikone klo. "+ aika))
+			 if(confirm("Varataanko pyykkikone klo. "+ aika) || $(window).width() <= 650)
 			 {
 				$(this).html("<span class='omaVaraus'>OMA VARAUS</span>");
 			 }
@@ -128,19 +128,19 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 		$(".shadow").addClass('hidden');
 	});
 	
-	$('#weekCalendar').on('click', 'td', function(){
+	$('.weekCalendar').on('click', 'td', function(){
 			console.log("varaus");
 	
 	});
 	
 	
-	$("#saannot").on("click",function() {
+	$(".saannot").on("click",function() {
 		$(".contentCon").load("Saannot.html", function(){
 			checkScrollBar();
 		});
 	});
 	
-	$("#seuranta").on("click",function() {
+	$(".seuranta").on("click",function() {
 		$(".contentCon").load("Seuranta.html", function(){
 			checkScrollBar();
 			$("#seuranta").removeClass("new");
@@ -163,7 +163,7 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 		$(".shadow").addClass('hidden');
 	});
 	
-	$("#varaukset").on("click",function() {
+	$(".varaukset").on("click",function() {
 		$(".contentCon").load("Varaukset.html", function(){
 			checkScrollBar();
 		});
@@ -175,10 +175,20 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 		
 	});
 	
+ $(".faMenu").click(function(){
+     if($(".menuContent").css('left') == '-200px'){
+       $(".menuContent").stop().animate({left:'0px'},1000);
+     };
+     if($(".menuContent").css('left') == '0px'){
+        $(".menuContent").stop().animate({left:'-200px'},1000);
+     };
+ });
 
 });
 
 //functions
+
+
 	
 	function checkScrollBar() {
     var hContent = $("body").height(); // get the height of your content

@@ -173,7 +173,7 @@ a{
 	text-decoration: none;
 	color: var(--white-color);
 }
-li#seuranta.new:after{
+li.seuranta.new:after{
 	content:"!";
 	padding-left: 10px;
 	color: red;
@@ -245,7 +245,75 @@ li#seuranta.new:after{
 }
 }
 
+.mobileCalendar{
+	display: none !important;
+}
+
+.mobileCalendar th {
+	text-align: center !important;
+}
+
+.menuMobile{
+		display: none;
+	}
+.menuMobile .menuContent{
+	position: absolute;
+	left: -200px;
+	background-color: var(--main-color);
+	width: 200px;
+}
+.menuMobile .verticalList{
+	list-style: none;
+	padding-left: 0;
+	margin: 0 0;
+}
+.menuMobile .verticalList li{
+	padding: 10px 10px;	
+	cursor: pointer;
+	border-bottom: 1px solid white;
+	color: var(--white-color);
+}
+
+.menuMobile .verticalList li:hover, .menuMobuile .verticalList li.selected{
+	background-color: var(--light-color);
+}
+
+
 @media only screen and (max-width: 650px) {
+	.popup{
+		width: 100% !important;
+		left: 0 !important;
+	}
+	
+	.vastaukset .vastaus > *{
+		display: block;
+		position: relative;
+		float: none;
+		border-left: none;
+	}
+	
+	.menuMobile{
+		display: block;
+		width: 100%;
+		position: fixed;
+		top:0;
+		background-color: #000;
+		z-index: 5;
+	}
+	.menuMobile .fa{
+		font-size:30px;
+		color: #FFFFFF;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+	
+.wideCalendar{
+	display: none !important;
+}
+.mobileCalendar{
+	display: block !important;
+}
+
 .menuConWide{
 	display: none;
 }
@@ -270,6 +338,17 @@ li#seuranta.new:after{
 	display: block;
 }
 
+.content-left, .asukasIlm, .content-right, .omaIlmCon, textarea {
+	overflow: hidden;
+	width:100% !important;
+	display: block !important;
+}
+.content-left h1, .asukasIlm h1{
+	font-size: 25px;
+}
+
+
+
 }
 
 #page{
@@ -277,7 +356,7 @@ li#seuranta.new:after{
 	vertical-align: middle;
 }
 
-#varaukset {
+.varaukset {
 	display:block;
 	overflow:auto;
 	
@@ -287,13 +366,13 @@ li#seuranta.new:after{
 	padding: 0 0;
 }
 
-#weeks {
+.weeks {
 	display:block;
 	overflow:auto;
 	background-color: #350;
 }
 
-#weekCalendar{
+.weekCalendar{
 	display:block;
 	overflow:auto;
 }
@@ -315,7 +394,7 @@ li#seuranta.new:after{
 	background-color: #111;
 }
 
-#weeks p{
+.weeks p{
 	float: center;
 	display: block;
     color: white;
@@ -345,13 +424,13 @@ li#seuranta.new:after{
 	width: 100%;
 }
 
-#table1 {
+.table1 {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#table1 th {
+.table1 th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
@@ -359,11 +438,11 @@ li#seuranta.new:after{
     color: white;
 }
 
-#table1 tr:nth-child(even){background-color: #f2f2f2;}
+.table1 tr:nth-child(even){background-color: #f2f2f2;}
 
-#table1 td:hover {background-color: #ddd;}
+.table1 td:hover {background-color: #ddd;}
 
-#table1 td, #table1 th {
+.table1 td, .table1 th {
     border: 1px solid #ddd;
     padding: 15px;
 }
@@ -576,6 +655,7 @@ body {
 	height: 100%;
 	z-index: 1;
 	background-color: rgba(0,0,0,0.5);
+	overflow: hidden;
 }
 .popup{
 	display: block;
