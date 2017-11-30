@@ -184,6 +184,7 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 		
 	});
 	
+	
  $(".faMenu").click(function(){
      menuToggle();
  });
