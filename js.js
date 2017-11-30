@@ -66,6 +66,7 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	$(".varaukset").on("click",function() {
 		$(".contentCon").load("Varaukset.html", function(){
 			checkScrollBar();
+			menuToggle();
 		});
 	});
 
@@ -73,6 +74,7 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	$(".ilmoitukset").on("click",function() {
 		$(".contentCon").load("Ilmoitukset.html", function(){
 			checkScrollBar();
+			menuToggle();
 		});
 	});
 	
@@ -80,6 +82,7 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	$(".taloyhtioilmoitukset").on("click",function() {
 		$(".contentCon").load("Ilmoitukset.html", function(){
 			checkScrollBar();
+			
 		});
 	});
 	
@@ -126,6 +129,7 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 		$(".popup").addClass('hidden');
 		$(".smallpopup").addClass('hidden');
 		$(".shadow").addClass('hidden');
+		$("body").removeClass('noscroll');
 	});
 	
 	$('.weekCalendar').on('click', 'td', function(){
@@ -137,13 +141,15 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	$(".saannot").on("click",function() {
 		$(".contentCon").load("Saannot.html", function(){
 			checkScrollBar();
+			menuToggle();
 		});
 	});
 	
 	$(".seuranta").on("click",function() {
 		$(".contentCon").load("Seuranta.html", function(){
 			checkScrollBar();
-			$("#seuranta").removeClass("new");
+			$(".seuranta").removeClass("new");
+			menuToggle();
 		});
 		
 	});
@@ -153,6 +159,8 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 		$(".popup").load("Ilmoitus_esimerkki.html", function(){
 			$(".popup").removeClass('hidden');
 			$(".shadow").removeClass('hidden');
+			$("body").addClass('noscroll');
+		
 			checkScrollBar();
 		});
 	});
@@ -161,6 +169,7 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 		$(".popup").addClass('hidden');
 		$(".smallpopup").addClass('hidden');
 		$(".shadow").addClass('hidden');
+		$("body").removeClass('noscroll');
 	});
 	
 	$(".varaukset").on("click",function() {
@@ -176,18 +185,22 @@ for(var i = 0; i< varaukset.varaukset.length; i++){
 	});
 	
  $(".faMenu").click(function(){
-     if($(".menuContent").css('left') == '-200px'){
-       $(".menuContent").stop().animate({left:'0px'},1000);
-     };
-     if($(".menuContent").css('left') == '0px'){
-        $(".menuContent").stop().animate({left:'-200px'},1000);
-     };
+     menuToggle();
  });
 
 });
 
 //functions
 
+function menuToggle(){
+	if($(".menuContent").css('left') == '-200px'){
+       $(".menuContent").stop().animate({left:'0px'},1000);
+     };
+     if($(".menuContent").css('left') == '0px'){
+        $(".menuContent").stop().animate({left:'-200px'},1000);
+     };
+	
+}
 
 	
 	function checkScrollBar() {
